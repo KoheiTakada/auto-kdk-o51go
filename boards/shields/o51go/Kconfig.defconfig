@@ -1,0 +1,7 @@
+
+if SHIELD_O51GO
+
+config ZMK_KEYBOARD_NAME
+    default "o51go"
+
+endif

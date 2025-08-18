@@ -1,0 +1,10 @@
+
+include:
+  - board: akdk_bt1
+    shield: o51go
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artificial-name: o51go
+  - board: akdk_bt1
+    shield: settings_reset
+    artificial-name: settings_reset-akdk_bt1-zmk
