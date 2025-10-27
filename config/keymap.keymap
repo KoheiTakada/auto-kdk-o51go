@@ -7,35 +7,35 @@
         Connect0: ConnectWinPC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &to 0>;
+            bindings = <&to 0 &bt BT_SEL 0>;
             label = "CONNECTWINPC";
         };
 
         Connect1: ConnectMacPC {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 1>;
+            bindings = <&to 1 &bt BT_SEL 1>;
             label = "CONNECTMACPC";
         };
 
         Connect2: ConnectPixel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 0>;
+            bindings = <&to 0 &bt BT_SEL 2>;
             label = "CONNECTPIXEL";
         };
 
         Connect3: Connect0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &to 1>;
+            bindings = <&to 1 &bt BT_SEL 3>;
             label = "CONNECT0";
         };
 
         Connect4: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &to 0>;
+            bindings = <&to 0 &bt BT_SEL 4>;
             label = "NEW_MACRO";
         };
     };
