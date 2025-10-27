@@ -7,7 +7,7 @@
         Connect0: Connect0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&macro_tap>, <&to 0>;
+            bindings = <&macro_tap>, <&bt BT_SEL 0>, <&macro_tap>, <&to 0>;
 
             label = "CONNECT0";
         };
@@ -15,7 +15,7 @@
         Connect1: Connect1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&macro_tap>, <&to 1>;
+            bindings = <&macro_tap>, <&bt BT_SEL 1>, <&macro_tap>, <&to 1>;
 
             label = "CONNECT1";
         };
@@ -23,7 +23,7 @@
         Connect2: Connect2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&macro_tap>, <&to 0>;
+            bindings = <&macro_tap>, <&bt BT_SEL 2>, <&macro_tap>, <&to 0>;
 
             label = "CONNECT2";
         };
@@ -31,7 +31,7 @@
         Connect3: Connect3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&macro_tap>, <&to 1>;
+            bindings = <&macro_tap>, <&bt BT_SEL 3>, <&macro_tap>, <&to 1>;
 
             label = "CONNECT3";
         };
@@ -39,7 +39,7 @@
         Connect4: Connect4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4>, <&macro_tap>, <&to 0>;
+            bindings = <&macro_tap>, <&bt BT_SEL 4>, <&macro_tap>, <&to 0>;
 
             label = "CONNECT4";
         };
