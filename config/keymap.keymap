@@ -21,14 +21,14 @@
         Connect2: ConnectPixel {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 1>;
+            bindings = <&bt BT_SEL 2 &to 0>;
             label = "CONNECTPIXEL";
         };
 
         Connect3: Connect0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &to 0>;
+            bindings = <&bt BT_SEL 3 &to 1>;
             label = "CONNECT0";
         };
 
