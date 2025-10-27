@@ -47,7 +47,7 @@
         atmark: atmark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1 &kp AT>;
+            bindings = <&kp LANGUAGE_2 &kp AT>;
             label = "ATMARK";
             wait-ms = <1>;
         };
