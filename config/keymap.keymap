@@ -3,19 +3,65 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        Connect0: ConnectWinPC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "CONNECTWINPC";
+        };
+
+        Connect1: ConnectMacPC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 1>;
+            label = "CONNECTMACPC";
+        };
+
+        Connect2: ConnectPixel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to 1>;
+            label = "CONNECTPIXEL";
+        };
+
+        Connect3: Connect0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &to 0>;
+            label = "CONNECT0";
+        };
+
+        Connect4: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to 0>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        MacMode {
             bindings = <
-&kp ESCAPE      &kp Q         &kp W         &kp E      &lt 2 R  &kp T          &mo 3  &kp Y      &lt 2 U    &kp I           &kp O         &kp P      &kp DEL
-&kp TAB         &kp A         &kp S         &kp D      &lt 1 F  &kp G          &none  &kp H      &lt 1 J    &kp K           &kp L         &kp MINUS  &kp ENTER
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C      &kp V    &kp B          &none  &kp N      &kp M      &kp COMMA       &kp PERIOD    &kp SLASH  &kp SEMICOLON
-&kp LCTRL       &kp LEFT_ALT  &kp LEFT_GUI  &kp LANG2  &kp DEL  &kp BACKSPACE         &kp SPACE  &kp ENTER  &kp LANGUAGE_1  &kp NUMBER_4  &kp HOME   &kp END
+&kp ESCAPE        &kp Q         &kp W             &kp E      &lt 3 R  &kp T          &mo 4  &kp Y      &lt 3 U    &kp I           &kp O                 &kp P      &kp DEL
+&kp TAB           &kp A         &kp S             &kp D      &lt 2 F  &kp G          &none  &kp H      &lt 2 J    &kp K           &kp L                 &kp MINUS  &kp ENTER
+&kp LEFT_SHIFT    &kp Z         &kp X             &kp C      &kp V    &kp B          &none  &kp N      &kp M      &kp COMMA       &kp PERIOD            &kp SLASH  &kp SEMICOLON
+&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LANG2  &kp DEL  &kp BACKSPACE         &kp SPACE  &kp ENTER  &kp LANGUAGE_1  &kp LG(LS(NUMBER_4))  &kp HOME   &kp END
             >;
         };
 
-        layer_1 {
+        WinMode {
+            bindings = <
+&kp ESCAPE        &kp Q         &kp W         &kp E      &lt 3 R  &kp T          &mo 4  &kp Y      &lt 3 U    &kp I           &kp O          &kp P      &kp DEL
+&kp TAB           &kp A         &kp S         &kp D      &lt 2 F  &kp G          &none  &kp H      &lt 2 J    &kp K           &kp L          &kp MINUS  &kp ENTER
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C      &kp V    &kp B          &none  &kp N      &kp M      &kp COMMA       &kp PERIOD     &kp SLASH  &kp SEMICOLON
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp LANG2  &kp DEL  &kp BACKSPACE         &kp SPACE  &kp ENTER  &kp LANGUAGE_1  &kp LG(LS(S))  &kp HOME   &kp END
+            >;
+        };
+
+        Symbols {
             bindings = <
 &none  &kp SQT            &kp PERCENT  &none            &none        &kp SLASH  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none  &none
 &none  &kp DOUBLE_QUOTES  &kp DOLLAR   &kp EXCLAMATION  &kp AT_SIGN  &kp MINUS  &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none  &none
@@ -24,7 +70,7 @@
             >;
         };
 
-        layer_2 {
+        BracketsAndArrows {
             bindings = <
 &none  &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none  &none           &kp UP_ARROW    &none            &none  &none  &none
 &none  &none  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &none
@@ -33,12 +79,12 @@
             >;
         };
 
-        layer_3 {
+        BlootoothLayer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &none
+&Connect0  &Connect1  &Connect2  &Connect3  &Connect4  &none  &none       &none  &none  &none  &none  &none  &none
+&none      &none      &none      &none      &none      &none  &bt BT_CLR  &none  &none  &none  &none  &none  &none
+&none      &none      &none      &none      &none      &none  &none       &none  &none  &none  &none  &none  &none
+&none      &none      &none      &none      &none      &none              &none  &none  &none  &none  &none  &none
             >;
         };
     };
