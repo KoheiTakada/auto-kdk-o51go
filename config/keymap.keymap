@@ -9,6 +9,7 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 0>;
             label = "CONNECT0";
+            wait-ms = <10>;
         };
 
         Connect1: Connect1 {
@@ -16,6 +17,7 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1 &to 1>;
             label = "CONNECT1";
+            wait-ms = <10>;
         };
 
         Connect2: Connect2 {
@@ -23,6 +25,7 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 2 &to 0>;
             label = "CONNECT2";
+            wait-ms = <10>;
         };
 
         Connect3: Connect3 {
@@ -30,6 +33,7 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 3 &to 1>;
             label = "CONNECT3";
+            wait-ms = <10>;
         };
 
         Connect4: Connect4 {
@@ -37,6 +41,7 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 4 &to 0>;
             label = "CONNECT4";
+            wait-ms = <10>;
         };
     };
 
