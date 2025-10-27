@@ -44,11 +44,115 @@
             wait-ms = <10>;
         };
 
-        atmark: atmark {
+        Atmark: Atmark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2 &kp AT>;
             label = "ATMARK";
+            wait-ms = <1>;
+        };
+
+        Tidle: Tidle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp TILDE>;
+            label = "TIDLE";
+            wait-ms = <1>;
+        };
+
+        YEN: YEN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp INT_YEN>;
+            label = "YEN";
+            wait-ms = <1>;
+        };
+
+        Ampersand: Ampersand {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp AMPERSAND>;
+            label = "AMPERSAND";
+            wait-ms = <1>;
+        };
+
+        Slash: Slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp SLASH>;
+            label = "SLASH";
+            wait-ms = <1>;
+        };
+
+        Asterisk: Asterisk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp ASTERISK>;
+            label = "ASTERISK";
+            wait-ms = <1>;
+        };
+
+        Minus: Minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp MINUS>;
+            label = "MINUS";
+            wait-ms = <1>;
+        };
+
+        Plus: Plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp PLUS>;
+            label = "PLUS";
+            wait-ms = <1>;
+        };
+
+        Hash: Hash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp HASH>;
+            label = "HASH";
+            wait-ms = <1>;
+        };
+
+        Equal: Equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp EQUAL>;
+            label = "EQUAL";
+            wait-ms = <1>;
+        };
+
+        Percent: Percent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp PERCENT>;
+            label = "PERCENT";
+            wait-ms = <1>;
+        };
+
+        Doller: Doller {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp DOLLAR>;
+            label = "DOLLER";
+            wait-ms = <1>;
+        };
+
+        Caret: Caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp CARET>;
+            label = "CARET";
+            wait-ms = <1>;
+        };
+
+        Pipe: Pipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp PIPE>;
+            label = "PIPE";
             wait-ms = <1>;
         };
     };
@@ -76,10 +180,10 @@
 
         Symbols {
             bindings = <
-&none   &kp SQT            &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none  &none
-&none   &kp DOUBLE_QUOTES  &kp DOLLAR   &kp EXCLAMATION       &atmark                &kp MINUS  &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none  &none
-&trans  &none              &kp CARET    &kp AMPERSAND         &kp TILDE              &kp HASH   &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none  &none
-&trans  &trans             &trans       &none                 &none                  &none                    &kp NUMBER_0  &kp DOT       &none         &none  &none  &none
+&none   &kp SQT            &Percent  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &Slash  &Asterisk  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none  &none
+&none   &kp DOUBLE_QUOTES  &Doller   &kp EXCLAMATION       &Atmark                &Minus  &Plus      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none  &none
+&trans  &Pipe              &Caret    &Ampersand            &Tidle                 &Hash   &Equal     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none  &none
+&trans  &trans             &trans    &none                 &none                  &none              &kp NUMBER_0  &kp DOT       &YEN          &none  &none  &none
             >;
         };
 
