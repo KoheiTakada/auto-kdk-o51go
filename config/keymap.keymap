@@ -23,7 +23,7 @@
         Connect2: Connect2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&macro_tap>, <&to 1>;
+            bindings = <&bt BT_SEL 2>, <&macro_tap>, <&to 0>;
 
             label = "CONNECT2";
         };
@@ -31,7 +31,7 @@
         Connect3: Connect3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&macro_tap>, <&to 0>;
+            bindings = <&bt BT_SEL 3>, <&macro_tap>, <&to 1>;
 
             label = "CONNECT3";
         };
