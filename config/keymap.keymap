@@ -4,44 +4,44 @@
 
 / {
     macros {
-        Connect0: ConnectWinPC {
+        Connect0: Connect0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&macro_tap>, <&bt BT_SEL 0>;
-
-            label = "CONNECTWINPC";
-        };
-
-        Connect1: ConnectMacPC {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 1>, <&macro_tap>, <&bt BT_SEL 1>;
-
-            label = "CONNECTMACPC";
-        };
-
-        Connect2: ConnectPixel {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 0>, <&macro_tap>, <&bt BT_SEL 2>;
-
-            label = "CONNECTPIXEL";
-        };
-
-        Connect3: Connect0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 1>, <&macro_tap>, <&bt BT_SEL 3>;
+            bindings = <&to 0>, <&macro_tap>, <&bt BT_SEL 0>, <&macro_tap>;
 
             label = "CONNECT0";
         };
 
-        Connect4: new_macro {
+        Connect1: Connect1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&macro_tap>, <&bt BT_SEL 4>;
+            bindings = <&to 1>, <&macro_tap>, <&bt BT_SEL 1>, <&macro_tap>;
 
-            label = "NEW_MACRO";
+            label = "CONNECT1";
+        };
+
+        Connect2: Connect2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&macro_tap>, <&bt BT_SEL 2>, <&macro_tap>;
+
+            label = "CONNECT2";
+        };
+
+        Connect3: Connect3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&macro_tap>, <&bt BT_SEL 3>, <&macro_tap>;
+
+            label = "CONNECT3";
+        };
+
+        Connect4: Connect4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&macro_tap>, <&bt BT_SEL 4>, <&macro_tap>;
+
+            label = "CONNECT4";
         };
     };
 
@@ -86,7 +86,7 @@
 
         BlootoothLayer {
             bindings = <
-&Connect0  &Connect1  &Connect2  &Connect3  &Connect4  &none  &none       &none  &none  &none  &none  &none  &none
+&Connect0  &Connect0  &Connect2  &Connect3  &Connect4  &none  &none       &none  &none  &none  &none  &none  &none
 &none      &none      &none      &none      &none      &none  &bt BT_CLR  &none  &none  &none  &none  &none  &none
 &none      &none      &none      &none      &none      &none  &none       &none  &none  &none  &none  &none  &none
 &none      &none      &none      &none      &none      &none              &none  &none  &none  &none  &none  &none
