@@ -169,12 +169,21 @@
             bindings = <&kp LANGUAGE_1 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
             label = "KAGIKAKKO";
         };
+    };
 
-        SumiKakko: SumiKakko {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_1 &kp LS(S) &kp LS(U) &kp LS(M) &kp LS(I) &kp LS(K) &kp LS(A) &kp LS(K) &kp LS(K) &kp LS(O) &kp SPACE &kp SPACE &kp ENTER &kp LEFT_ARROW>;
-            label = "SUMIKAKKO";
+    combos {
+        compatible = "zmk,combos";
+
+        ZenKakko {
+            bindings = <&ZenKakko>;
+            key-positions = <3 4>;
+            layers = <3 2>;
+        };
+
+        KagiKakko {
+            bindings = <&KagiKakko>;
+            key-positions = <16 17>;
+            layers = <3 2>;
         };
     };
 
@@ -210,10 +219,10 @@
 
         BracketsAndArrows {
             bindings = <
-&none  &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &ZenKakko   &none  &none           &kp UP_ARROW    &none            &none  &none  &none
-&none  &none  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &KagiKakko  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &none
-&none  &none  &none  &none                 &none                  &SumiKakko  &none  &none           &none           &none            &none  &none  &none
-&none  &none  &none  &none                 &none                  &none              &none           &none           &none            &none  &none  &none
+&none  &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none  &none           &kp UP_ARROW    &none            &none  &none  &none
+&none  &none  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &none
+&none  &none  &none  &none                 &none                  &none  &none  &none           &none           &none            &none  &none  &none
+&none  &none  &none  &none                 &none                  &none         &none           &none           &none            &none  &none  &none
             >;
         };
 
