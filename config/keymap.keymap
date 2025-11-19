@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     macros {
@@ -155,6 +156,20 @@
             label = "PIPE";
             wait-ms = <1>;
         };
+
+        ZenKakko: kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1 &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp ENTER &kp LEFT>;
+            label = "KAKKO";
+        };
+
+        KagiKakko: KagiKakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_1 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp ENTER &kp LEFT_ARROW>;
+            label = "KAGIKAKKO";
+        };
     };
 
     keymap {
@@ -180,19 +195,19 @@
 
         Symbols {
             bindings = <
-&none   &kp SQT            &Percent  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &Slash  &Asterisk  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none  &none
-&none   &kp DOUBLE_QUOTES  &Doller   &kp EXCLAMATION       &Atmark                &Minus  &Plus      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none  &none
-&trans  &Pipe              &Caret    &Ampersand            &Tidle                 &Hash   &Equal     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none  &none
-&trans  &trans             &trans    &none                 &none                  &none              &kp NUMBER_0  &kp DOT       &YEN          &none  &none  &none
+&none   &kp SQT            &Percent  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &Slash  &Asterisk  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none           &mmv MOVE_UP    &none
+&none   &kp DOUBLE_QUOTES  &Doller   &kp EXCLAMATION       &Atmark                &Minus  &Plus      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT
+&trans  &Pipe              &Caret    &Ampersand            &Tidle                 &Hash   &Equal     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none           &mmv MOVE_DOWN  &none
+&trans  &trans             &trans    &none                 &none                  &none              &kp NUMBER_0  &kp DOT       &YEN          &mkp MB1        &mkp MB3        &mkp MB2
             >;
         };
 
         BracketsAndArrows {
             bindings = <
-&none  &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none  &none           &kp UP_ARROW    &none            &none  &none  &none
-&none  &none  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &none
-&none  &none  &none  &none                 &none                  &none  &none  &none           &none           &none            &none  &none  &none
-&none  &none  &none  &none                 &none                  &none         &none           &none           &none            &none  &none  &none
+&none  &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &ZenKakko   &none  &none           &kp UP_ARROW    &none            &none  &none  &none
+&none  &none  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &KagiKakko  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &none  &none
+&none  &none  &none  &none                 &none                  &none       &none  &none           &none           &none            &none  &none  &none
+&none  &none  &none  &none                 &none                  &none              &none           &none           &none            &none  &none  &none
             >;
         };
 
