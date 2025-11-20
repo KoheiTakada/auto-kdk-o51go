@@ -40,7 +40,7 @@ Auto-KDKのパラメータ設定により、以下のデータを自動生成・
 
 ## 🤝 Credits & Acknowledgements
 巨人の肩に乗りまくっています。
-Original o51go Concept: Designed by Salicylic_acid3
-Auto-KDK: Developed by sekigon-gonnoc
+- Original o51go Concept: Designed by Salicylic_acid3
+- Auto-KDK: Developed by sekigon-gonnoc
 
 Note: This is an unofficial derivative project using Auto-KDK. Please do not contact the original designers for support regarding this specific repository.
