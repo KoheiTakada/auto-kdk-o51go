@@ -1,27 +1,46 @@
-# About
+# Auto-KDK O51Go
 
-[Auto-Keyboard-Design-Kit](https://auto-kdk.pages.dev/)によって生成されました。
-サリチル酸さんのo51goの無線版がほしくて作成したものです。
+このリポジトリは、キーボード自動設計ツール [Auto-KDK](https://github.com/sekigon-gonnoc/auto-kdk) を使用して生成された **o51go** ライクなキーボードの設計データを管理するプロジェクトです。
 
-## プレビュー
+サリチル酸氏による [o51go](https://salicylic-acid3.hatenablog.com/entry/go40keeb-build-guide) のレイアウト/コンセプトをベースに、Auto-KDKを用いてPCB、ケース、ファームウェア設定を生成しています。
 
-- 3D View
+## 📂 概要 (Overview)
 
-![Case Preview](images/o51go-case-preview.png)
+Auto-KDKのパラメータ設定により、以下のデータを自動生成・管理しています。
 
-- Top View
+* **PCB設計データ**: KiCadプロジェクトおよび製造用ガーバーデータ
+* **ケースデータ**: 3Dプリント用のSTL/STEPファイル
+* **ファームウェア**: Vial / QMK / ZMK 用の設定ファイル
 
-![Top View](images/o51go-top-view.png)
+## 🚀 使い方 (Usage)
 
-## 必要なパーツ
+### 1. 設計の調整
+リポジトリ内の `configs/layout.json` (または該当する設定ファイル) を [Auto-KDK Web App](https://github.com/sekigon-gonnoc/auto-kdk) にロードすることで、Webブラウザ上で形状や配線の再設定が可能です。
 
-|パーツ|数|
-|---|---|
-|[AutoKDK 無線版コントローラー](https://booth.pm/ja/items/6604431?srsltid=AfmBOooSGa97eGKetJGj4JMUh7OC0qhsXzHiW3Xuf0rtbPm4ax6-go8w)左右どちらでも対応するケースを用意しています|1|
-|コンスルー(2.5mm, 9pin)|2|
-|バッテリー|1|
-|Choc V2 スイッチとホットスワップのソケット|51|
-|ダイオード|51|
-|キーキャップ|51|
-|USB-C ケーブル|1|
+### 2. PCBの製造
+`pcb/gerbers/` ディレクトリ内のZIPファイルを [JLCPCB](https://jlcpcb.com/) 等の基板製造メーカーにアップロードしてください。
 
+### 3. ケースの作成
+`case/` ディレクトリ内のSTLファイルを3Dプリンターで出力 もしくはJLC3DPに発注してください。Bambulab A1で出力可能なサイズです。
+
+### 4. ファームウェア
+`firmware/` ディレクトリを参照し、コントローラー（Auto-KDK Controller Board）にファームウェアを書き込んでください。
+
+## 🛠️ ディレクトリ構成
+
+```text
+.
+├── configs/       # Auto-KDK用の入力設定ファイル (.json)
+├── pcb/           # KiCadプロジェクトおよび製造データ
+│   └── gerbers/   # そのまま発注可能なZIPファイル
+├── case/          # 3Dモデルデータ (STL/STEP)
+├── firmware/      # ファームウェア設定 (vial.json, keymap等)
+└── README.md      # 本ファイル
+```
+
+## 🤝 Credits & Acknowledgements
+巨人の肩に乗りまくっています。
+Original o51go Concept: Designed by Salicylic_acid3
+Auto-KDK: Developed by sekigon-gonnoc
+
+Note: This is an unofficial derivative project using Auto-KDK. Please do not contact the original designers for support regarding this specific repository.
