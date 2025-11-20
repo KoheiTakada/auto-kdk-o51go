@@ -1,4 +1,4 @@
-# Auto-KDK O51Go
+# Auto-KDK o51go
 
 このリポジトリは、キーボード自動設計ツール [Auto-KDK](https://github.com/sekigon-gonnoc/auto-kdk) を使用して生成された **o51go** ライクなキーボードの設計データを管理するプロジェクトです。
 
