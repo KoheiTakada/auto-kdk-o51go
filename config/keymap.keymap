@@ -1,7 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     macros {
@@ -193,10 +192,10 @@
 
         MacMode {
             bindings = <
-&kp ESCAPE        &kp Q         &kp W             &kp E      &lt 3 R  &kp T          &mo 4   &kp Y      &lt 3 U    &kp I           &kp O                 &kp P      &kp BACKSPACE
-&kp TAB           &kp A         &kp S             &kp D      &lt 2 F  &kp G          &Minus  &kp H      &lt 2 J    &kp K           &kp L                 &kp MINUS  &kp ENTER
-&kp LEFT_SHIFT    &kp Z         &kp X             &kp C      &kp V    &kp B          &Hash   &kp N      &kp M      &kp COMMA       &kp PERIOD            &kp SLASH  &kp SEMICOLON
-&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LANG2  &kp DEL  &kp BACKSPACE          &kp SPACE  &kp ENTER  &kp LANGUAGE_1  &kp LG(LS(NUMBER_4))  &mkp MB4   &mkp MB5
+&kp ESCAPE        &kp Q         &kp W             &kp E      &lt 3 R  &kp T          &mo 4   &kp Y      &lt 3 U    &kp I           &kp O                 &kp P               &kp BACKSPACE
+&kp TAB           &kp A         &kp S             &kp D      &lt 2 F  &kp G          &Minus  &kp H      &lt 2 J    &kp K           &kp L                 &kp MINUS           &kp ENTER
+&kp LEFT_SHIFT    &kp Z         &kp X             &kp C      &kp V    &kp B          &Hash   &kp N      &kp M      &kp COMMA       &kp PERIOD            &kp SLASH           &kp SEMICOLON
+&kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LANG2  &kp DEL  &kp BACKSPACE          &kp SPACE  &kp ENTER  &kp LANGUAGE_1  &kp LG(LS(NUMBER_4))  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)
             >;
         };
 
