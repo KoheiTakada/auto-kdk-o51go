@@ -211,10 +211,10 @@
 
         Symbols {
             bindings = <
-&none   &kp SQT            &Percent  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &Slash  &Asterisk  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none           &mmv MOVE_UP    &none
-&none   &kp DOUBLE_QUOTES  &Doller   &kp EXCLAMATION       &Atmark                &Minus  &Plus      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT
-&trans  &Pipe              &Caret    &Ampersand            &Tidle                 &Hash   &Equal     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none           &mmv MOVE_DOWN  &none
-&trans  &trans             &trans    &none                 &none                  &none              &kp NUMBER_0  &kp DOT       &YEN          &mkp LCLK       &mkp MB3        &mkp RCLK
+&none   &kp SQT            &Percent  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &Slash  &Asterisk  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none  &none
+&none   &kp DOUBLE_QUOTES  &Doller   &kp EXCLAMATION       &Atmark                &Minus  &Plus      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none  &none
+&trans  &Pipe              &Caret    &Ampersand            &Tidle                 &Hash   &Equal     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none  &none
+&trans  &trans             &trans    &none                 &none                  &none              &kp NUMBER_0  &kp DOT       &YEN          &none  &none  &none
             >;
         };
 
