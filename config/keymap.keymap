@@ -202,10 +202,10 @@
 
         WinMode {
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E      &lt 3 R  &kp T          &mo 4  &kp Y      &lt 3 U    &kp I           &kp O          &kp P      &kp BACKSPACE
-&kp TAB           &kp A         &kp S         &kp D      &lt 2 F  &kp G          &none  &kp H      &lt 2 J    &kp K           &kp L          &kp MINUS  &kp ENTER
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C      &kp V    &kp B          &none  &kp N      &kp M      &kp COMMA       &kp PERIOD     &kp SLASH  &kp SEMICOLON
-&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp LANG2  &kp DEL  &kp BACKSPACE         &kp SPACE  &kp ENTER  &kp LANGUAGE_1  &kp LS(LA(S))  &kp HOME   &kp END
+&kp ESCAPE        &kp Q         &kp W         &kp E      &lt 3 R  &kp T          &mo 4   &kp Y      &lt 3 U    &kp I           &kp O          &kp P      &kp BACKSPACE
+&kp TAB           &kp A         &kp S         &kp D      &lt 2 F  &kp G          &Minus  &kp H      &lt 2 J    &kp K           &kp L          &kp MINUS  &kp ENTER
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C      &kp V    &kp B          &Hash   &kp N      &kp M      &kp COMMA       &kp PERIOD     &kp SLASH  &kp SEMICOLON
+&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &kp LANG2  &kp DEL  &kp BACKSPACE          &kp SPACE  &kp ENTER  &kp LANGUAGE_1  &kp LS(LA(S))  &kp HOME   &kp END
             >;
         };
 
