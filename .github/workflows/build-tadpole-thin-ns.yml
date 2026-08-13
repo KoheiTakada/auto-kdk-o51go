@@ -1,6 +1,11 @@
 name: Build Tadpole thin-NS case
 
 on:
+  push:
+    paths:
+      - 'case/**'
+      - 'tools/generate_tadpole_thin_ns.py'
+      - '.github/workflows/build-tadpole-thin-ns.yml'
   workflow_dispatch:
 
 jobs:
