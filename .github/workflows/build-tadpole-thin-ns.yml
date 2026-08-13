@@ -1,9 +1,6 @@
 name: Build Tadpole thin-NS case
 
 on:
-  push:
-    branches:
-      - tadpole-side-mount-prototype
   workflow_dispatch:
 
 jobs:
