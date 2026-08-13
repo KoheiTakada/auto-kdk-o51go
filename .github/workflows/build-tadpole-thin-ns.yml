@@ -1,0 +1,26 @@
+name: Build Tadpole thin-NS case
+
+on:
+  push:
+    branches:
+      - tadpole-side-mount-prototype
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install geometry dependencies
+        run: pip install 'numpy<3' trimesh manifold3d
+      - name: Generate STL / GLB
+        run: python tools/generate_tadpole_thin_ns.py --repo . --out tadpole-output
+      - name: Show report
+        run: cat tadpole-output/report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: o51go-tadpole-thin-ns
+          path: tadpole-output/
