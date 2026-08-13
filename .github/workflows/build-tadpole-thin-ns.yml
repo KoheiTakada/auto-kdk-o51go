@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install geometry dependencies
-        run: pip install 'numpy<3' trimesh manifold3d
+        run: pip install 'numpy<3' scipy trimesh manifold3d
       - name: Generate STL / GLB
         run: python tools/generate_tadpole_thin_ns.py --repo . --out tadpole-output
       - name: Show report
