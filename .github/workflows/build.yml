@@ -1,6 +1,20 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+
+on:
+  push:
+    paths:
+      - 'boards/**'
+      - 'config/**'
+      - 'build.yaml'
+  pull_request:
+    paths:
+      - 'boards/**'
+      - 'config/**'
+      - 'build.yaml'
+  workflow_dispatch:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Pin to the ZMK revision used by the last known-good firmware build.
+    # config/west.yml is pinned to the same revision for reproducibility.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@e34793e8c7193bc868b95ec38d78f67956f759cb
